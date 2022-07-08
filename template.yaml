@@ -1,0 +1,23 @@
+AWSTemplateFormatVersion: 2010-09-09
+Transform: AWS::Serverless-2016-10-31
+Description: SAM Template
+Globals:
+  Function:
+    Timeout: 30
+Resources:
+  baselone:
+    Type: AWS::CloudFormation::Stack
+    Properties:
+      TemplateURL: baselone_Stack/template.yaml
+  baseltwo:
+    Type: AWS::CloudFormation::Stack
+    Properties:
+      TemplateURL: baseltwo_Stack/template.yaml
+  emailEmailAuthModule:
+    Type: AWS::CloudFormation::Stack
+    Properties:
+      TemplateURL: emailEmailAuthModule_Stack/template.yaml
+  custom:
+    Type: AWS::CloudFormation::Stack
+    Properties:
+      TemplateURL: custom_Stack/template.yaml

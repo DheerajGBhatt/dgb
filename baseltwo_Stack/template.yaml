@@ -1,0 +1,21 @@
+AWSTemplateFormatVersion: 2010-09-09
+Transform: AWS::Serverless-2016-10-31
+Description: SAM Template
+Globals:
+  Function:
+    Timeout: 30
+Resources:
+  lamthree:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: lamthree
+      CodeUri: lamthree/
+      Runtime: nodejs14.x
+      Handler: app.lambdaHandler
+  lamfour:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: lamfour
+      CodeUri: lamfour/
+      Runtime: nodejs14.x
+      Handler: app.lambdaHandler
